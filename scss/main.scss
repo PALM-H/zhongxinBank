@@ -1,0 +1,247 @@
+@import "./variables.scss";
+@import "./reset.scss";
+
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  // -webkit-transform: scale(1) rotate(0) translate3d(0,0,0);
+  // transform: scale(1) rotate(0) translate3d(0,0,0);
+}
+
+@keyframes tipmove {
+  0% {
+    transform: translateY(0.3rem);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-0.3rem);
+    opacity: 0.3;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Microsoft YaHei"
+}
+.loading{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background: #fff;
+}
+@keyframes rotate {
+  0%{
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  .swiper-wrapper {
+    .swiper-slide {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      // background: url(../upload/bg.jpg) no-repeat left top;
+      // background-size: 100% 100%;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 0.2rem;
+    height: 0.2rem;
+    background: #fff;
+    opacity: 0.4;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+
+
+  .ani,.txt {
+    position: absolute;
+  }
+
+}
+
+.s1{
+  background: url("../images/s1-bg.png") center bottom/cover no-repeat;
+  // background: #000;
+  .s1-t1{
+    width: 100%;
+    text-align: center;
+    font-size: .53rem;
+    color: #fff;
+  }
+  .s1-circle{
+    left:50%;
+    margin-left:-2.74rem;
+    opacity: 0;
+    animation: rotate 3s linear 3s infinite;
+  }
+  .s1-t2{
+    left:50%;
+    margin-left:-2.26rem;
+    width:4.53rem;
+    height: .96rem;
+    background: url("../images/s1-t2.png") center/cover no-repeat;
+  }
+  .s1-t3{
+    left:50%;
+    margin-left:-1.3rem;
+  }
+  .s1-t4{
+    left:50%;
+    margin-left:-1.33rem;
+  }
+  .s1-t5{
+    width: 100%;
+    text-align: center;
+    font-size: .8rem;
+    color: #fff;
+  }
+  .s1-t6{
+    width: 100%;
+    text-align: center;
+    font-size: .43rem;
+    color: #fff;
+  }
+}
+.s2{
+  background: url("../images/s2-bg.png") center bottom/cover no-repeat;
+  font-size: .34rem;
+  line-height: 1.2;
+  color: #fff;
+  
+}
+.s3{
+  background: url("../images/s3-bg.png") center bottom/cover no-repeat;
+  .s3-p1{
+    border-radius: 50%;
+    background:url("../images/s3-p1.png") center/cover no-repeat;
+  }
+  .s3-circle{
+    opacity: 0;
+    animation: rotate 3s linear 1s infinite normal;
+  }
+  .s3-t1{
+    width: 100%;
+    text-align: center;
+    font-size: .46rem;
+    color: #fff;
+  }
+  .s3-t2{
+    width: 100%;
+    text-align: center;
+    font-size: .28rem;
+    color: #fff;
+  }
+  .s3-t3{
+    width: 100%;
+    text-align: justify;
+    font-size: .32rem;
+    color: #fff;
+  }
+}
+.s4{
+  background: url("../images/s4-bg.png") center bottom/cover no-repeat;
+  .s4-p1{
+    border-radius: 50%;
+    background:url("../images/s4-p1.png") center/cover no-repeat;
+  }
+  .s4-circle{
+    opacity: 0;
+    animation: rotate 3s linear 1s infinite normal;
+  }
+  .s4-t1{
+    width: 100%;
+    text-align: center;
+    font-size: .46rem;
+    color: #fff;
+  }
+  .s4-t2{
+    width: 100%;
+    text-align: center;
+    font-size: .28rem;
+    color: #fff;
+  }
+  .s4-t3{
+    width: 100%;
+    text-align: justify;
+    font-size: .32rem;
+    color: #fff;
+  }
+}
+.s5{
+  background: url("../images/s5-bg.png") center bottom/cover no-repeat;
+  .s5-t1{
+    width: 100%;
+    text-align: center;
+    font-size: .64rem;
+    color: #3f3f3f;
+  }
+  .s5-t2{
+    width: 100%;
+    text-align: center;
+    font-size: .31rem;
+    color: #3f3f3f;
+    font-weight: bold;
+  }
+}
+.s6{
+  background: url("../images/s6-bg.png") center bottom/cover no-repeat;
+}
+.logo {
+  position: fixed;
+  z-index: 5;
+  top: 0.2rem;
+  left: 0.4rem;
+  width: 1.85rem;
+  height:.71rem;
+  background: url("../images/logo.png") center/cover no-repeat;
+}
+.music-cover {
+  position: fixed;
+  z-index: 5;
+  top: 0.3rem;
+  right: 0.4rem;
+  width: .5rem;
+  height: .5rem;
+  background: url("../images/music_on.png") center/cover no-repeat;
+}
+#allmap {
+  position: absolute;
+  top: 6.7rem;
+  left: .75rem;
+  width: 6rem;
+  height: 3.08rem;
+  overflow: hidden;
+  margin: 0;
+  font-family: "微软雅黑";
+}
+.tipmove {
+  position: absolute;
+  z-index: 999;
+  width: 0.6rem;
+  height: 0.45rem;
+  bottom: 0.3rem;
+  left: 50%;
+  margin-left: -0.3rem;
+  animation: tipmove 3s ease-in-out infinite;
+}
